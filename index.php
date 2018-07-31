@@ -6,7 +6,6 @@
 
   <!-- Page Content -->
   <div class="container">
-
       <div class="row">
 
           <!-- Blog Entries Column -->
@@ -28,7 +27,7 @@
         <small>Secondary Text</small>
     </h1>
 
-    <!-- First Blog Post -->
+    <!-- Blog Post -->
     <h2>
         <a href="#"><?= $post_title ?></a>
     </h2>
@@ -37,8 +36,10 @@
     </p>
     <p><span class="glyphicon glyphicon-time"></span> Posted on <?= $post_date ?></p>
     <hr>
-    <img class="img-responsive" src="http://placehold.it/900x300" alt="">
-    <hr>
+    <?php if (!empty($post_image)){ ?>
+      <img class="img-responsive" src="images/<?php echo $post_image; ?>" alt="">
+      <hr>
+    <?php } ?>
     <p><?= $post_content ?></p>
     <a class="btn btn-primary" href="#">Read More <span class="glyphicon glyphicon-chevron-right"></span></a>
     <br/>
